@@ -1,0 +1,22 @@
+<?php
+class myparent {
+    public function foo($bar) {
+// do stuff
+    }
+}
+
+class mychild extends myparent {
+    public $val;
+
+    private function bar(myparent &$baz) {
+// do stuff
+    }
+    public function __construct($val) {
+        $this->val = $val;
+    }
+}
+$child = new mychild('hello world');
+$child->foo('test');
+$reflect = new ReflectionClass('mychild');
+echo $reflect;
+?>
